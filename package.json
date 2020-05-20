@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.39",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
     "antd": "^3.26.11",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+    "react-highlight-words": "^0.16.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
