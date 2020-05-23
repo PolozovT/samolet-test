@@ -17,11 +17,8 @@ function HeaderMenu() {
         selectedKeys={menu}
         onClick={handlerClick}
       >
-        <Menu.Item key="/main-list">
-          <Link to={"/main-list"}>Whole lis of libraries</Link>
-        </Menu.Item>
-        <Menu.Item key="/lib-info">
-          <Link to={"/lib-info"}>Info about each library</Link>
+        <Menu.Item key="/">
+          <Link to={"/"}>Whole lis of libraries</Link>
         </Menu.Item>
       </Menu>
     </Layout>

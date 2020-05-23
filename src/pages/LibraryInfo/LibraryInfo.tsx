@@ -1,12 +1,12 @@
-import { Table } from "antd";
-import { getData } from "../../api";
-import React, { FC, useEffect, useState } from "react";
+import Table from "antd/lib/table";
+import React, { FC } from "react";
 import { ILibrary } from "../../interfaces/ILibrary";
 import "./styles.css";
 import { ColumnProps } from "antd/lib/table";
+import { useParams } from "react-router-dom";
 
-const LibraryInfo: FC<{ data?: Array<ILibrary> }> = () => {
-    const [data, setData] = useState([]);
+const LibraryInfo: FC<{ data?: ILibrary }> = () => {
+    const { number } = useParams();
 
     function numberWithSpaces(x: number) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -51,14 +51,9 @@ const LibraryInfo: FC<{ data?: Array<ILibrary> }> = () => {
         },
     ];
 
-    useEffect(() => {
-        getData().then(setData).catch();
-    }, []);
-
     return (
         <div className={"main"}>
-            {/* there is a problem with height of table when compressing*/}
-            <Table columns={columns} dataSource={data} />
+            <Table columns={columns} dataSource={[JSON.parse(number)]} />
         </div>
     );
 };

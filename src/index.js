@@ -16,10 +16,7 @@ ReactDOM.render(
       <Route exact path="/">
         <LibraryList />
       </Route>
-      <Route exact path="/main-list">
-        <LibraryList />
-      </Route>
-      <Route exact path="/lib-info">
+      <Route path="/lib-info/:number">
         <LibraryInfo />
       </Route>
     </Switch>
